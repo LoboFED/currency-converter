@@ -1,6 +1,6 @@
 # Currency converter # 
 
-![Print screen](https://github.com/LoboFED/currency-converter/blob/main/images/page.png)
+![Print screen](https://github.com/LoboFED/currency-converter/blob/main/images/page.png?raw=true)
 
 ## Description ## 
 
