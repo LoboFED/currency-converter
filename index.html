@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przelicznik walut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/div.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="global">
+    <header class="header">
+        <h1>Przelicznik Walut</h1>
+    </header>
+    <main>
+        <div class="div">
+            <form class="form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Kalkulator
+                    </legend>
+                    <p>
+                        <label>
+                            <span class="form__labelText">
+                                Wpisz kwotę w polskich Złotych:
+                            </span><input class="form__field form__js-amount" type="number" step="0.01" min="0.04"
+                                name="Kwota z" placeholder="Pole wymagane!!!" required>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <span class="form__labelText">
+                                Waluta na którą chcesz przeliczyć:
+                            </span><select class="form__field form__js-currency" name="Kwota na">
+                                <option value="EUR" selected>Euro (EUR)</option>
+                                <option value="USD">Dolar Amerykański (USD)</option>
+                            </select>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <span class="form__labelText">
+                                Kurs*:
+                            </span><input class="form__field form__js-defaultRate" type="number" step="0.0001"
+                                name="Kurs" value="4.5481">
+                        </label>
+                    </p>
+
+                    <p>
+                        <button class="form__defaultButton form__js-button">Kurs domyślny</button>
+                    </p>
+                    <p class="form__paragraph form__paragraph--information">
+                        *Możesz wpisać własny kurs
+                    </p>
+
+                </fieldset>
+
+                <p class="form__paragraphButton">
+                    <button class="form__button">Przelicz</button>
+                </p>
+
+                <p class="form__paragraph">
+                    Kwota po przeliczeniu: <strong class="section__js-convertedAmount"></strong> <strong
+                        class="section__js-currencyChanged"></strong>
+
+
+            </form>
+        </div>
+        <div class="div div__defaultCurrency">
+
+            <p>
+                *Domyślne kursy walut:
+            </p>
+            <p>
+                Euro (EUR) - 4,5481
+            </p>
+            <p>
+                Dolar amerykański (USD) - 3,7978
+            </p>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Kalkulator walut. Kursy na dzień 18.04.2021</p>
+    </footer>
+</body>
+
+</html>

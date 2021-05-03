@@ -1,0 +1,10 @@
+.footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #002fff;
+    border-radius: 3px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px 0px #002fff59;
+    text-shadow: 1px 1px 1px #002fff59;
+    font-size: 14px;
+}
