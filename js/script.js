@@ -1,16 +1,16 @@
 let form = document.querySelector(".form")
 
-let amount = document.querySelector(".form__js-amount");
+let amount = document.querySelector(".js-amount");
 
-let currency = document.querySelector(".form__js-currency");
+let currency = document.querySelector(".js-currency");
 
-let defaultRate = document.querySelector(".form__js-defaultRate");
+let defaultRate = document.querySelector(".js-defaultRate");
 
-let button = document.querySelector(".form__js-button");
+let button = document.querySelector(".js-button");
 
-let convertedAmount = document.querySelector(".section__js-convertedAmount");
+let convertedAmount = document.querySelector(".js-convertedAmount");
 
-let currencyChanged = document.querySelector(".section__js-currencyChanged");
+let currencyChanged = document.querySelector(".js-currencyChanged");
 
 currency.addEventListener("input", () => {
 

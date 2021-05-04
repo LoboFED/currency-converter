@@ -35,7 +35,7 @@
                         <label>
                             <span class="form__labelText">
                                 Wpisz kwotę w polskich Złotych:
-                            </span><input class="form__field form__js-amount" type="number" step="0.01" min="0.04"
+                            </span><input class="form__field js-amount" type="number" step="0.01" min="0.04"
                                 name="Kwota z" placeholder="Pole wymagane!!!" required>
                         </label>
                     </p>
@@ -44,7 +44,7 @@
                         <label>
                             <span class="form__labelText">
                                 Waluta na którą chcesz przeliczyć:
-                            </span><select class="form__field form__js-currency" name="Kwota na">
+                            </span><select class="form__field js-currency" name="Kwota na">
                                 <option value="EUR" selected>Euro (EUR)</option>
                                 <option value="USD">Dolar Amerykański (USD)</option>
                             </select>
@@ -55,13 +55,13 @@
                         <label>
                             <span class="form__labelText">
                                 Kurs*:
-                            </span><input class="form__field form__js-defaultRate" type="number" step="0.0001"
+                            </span><input class="form__field js-defaultRate" type="number" step="0.0001"
                                 name="Kurs" value="4.5481">
                         </label>
                     </p>
 
                     <p>
-                        <button class="form__defaultButton form__js-button">Kurs domyślny</button>
+                        <button class="form__defaultButton js-button">Kurs domyślny</button>
                     </p>
                     <p class="form__paragraph form__paragraph--information">
                         *Możesz wpisać własny kurs
@@ -74,8 +74,8 @@
                 </p>
 
                 <p class="form__paragraph">
-                    Kwota po przeliczeniu: <strong class="section__js-convertedAmount"></strong> <strong
-                        class="section__js-currencyChanged"></strong>
+                    Kwota po przeliczeniu: <strong class="js-convertedAmount"></strong> <strong
+                        class="js-currencyChanged"></strong>
 
 
             </form>
