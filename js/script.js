@@ -1,50 +1,69 @@
-let form = document.querySelector(".form")
+{
 
-let amount = document.querySelector(".js-amount");
+    const changeRate = () => {
 
-let currency = document.querySelector(".js-currency");
+        const rateEUR = 4.5481;
+        const rateUSD = 3.7978;
+        const currency = document.querySelector(".js-currency");
+        const defaultRate = document.querySelector(".js-defaultRate");
 
-let defaultRate = document.querySelector(".js-defaultRate");
+        switch (currency.value) {
+            case "EUR":
+                defaultRate.value = rateEUR;
+                break;
 
-let button = document.querySelector(".js-button");
-
-let convertedAmount = document.querySelector(".js-convertedAmount");
-
-let currencyChanged = document.querySelector(".js-currencyChanged");
-
-currency.addEventListener("input", () => {
-
-    switch (currency.value) {
-        case "EUR":
-            defaultRate.value = "4.5481";
-            break;
-
-        case "USD":
-            defaultRate.value = "3.7978";
-            break;
+            case "USD":
+                defaultRate.value = rateUSD;
+                break;
+        }
     }
-})
+    
+    const changeCurrency = () => {
 
-button.addEventListener("click", (defaultCurrency) => {
-    defaultCurrency.preventDefault();
+        const currency = document.querySelector(".js-currency");
 
-    switch (currency.value) {
-        case "EUR":
-            defaultRate.value = "4.5481";
-            break;
+        currency.addEventListener("input", () => {
 
-        case "USD":
-            defaultRate.value = "3.7978";
-            break;
+            changeRate();
+        })
     }
-})
+    changeCurrency();
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+    const changeDefaultRate = () => {
 
-    let amountValue = amount.value;
-    let defaultRateValue = defaultRate.value;
-    let score = +amountValue / +defaultRateValue;
-    convertedAmount.innerText = score.toFixed(2);
-    currencyChanged.innerText = currency.value;
-})
+        const button = document.querySelector(".js-button");
+
+        button.addEventListener("click", () => {
+
+            changeRate();
+        })
+    }
+    changeDefaultRate();
+
+    const calculateResult = () => {
+
+        const amount = document.querySelector(".js-amount");
+        const defaultRate = document.querySelector(".js-defaultRate");
+        const convertedAmount = document.querySelector(".js-convertedAmount");
+        const currencyChanged = document.querySelector(".js-currencyChanged");
+        const currency = document.querySelector(".js-currency");
+        const amountValue = amount.value;
+        const defaultRateValue = defaultRate.value;
+        const result = +amountValue / +defaultRateValue;
+
+        convertedAmount.innerText = result.toFixed(2);
+        currencyChanged.innerText = currency.value;
+    }
+
+    const init = () => {
+
+        const form = document.querySelector(".form")
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            calculateResult();
+        })
+    }
+    init();
+}
